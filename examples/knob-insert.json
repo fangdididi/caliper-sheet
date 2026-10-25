@@ -1,0 +1,10 @@
+{
+  "part": {"id": "PART-012", "name": "dryer knob insert (first pass)", "units": "mm", "purpose": "replace"},
+  "dims": [
+    {"code": "L1", "name": "insert length", "role": "free", "readings": [19.04, 19.06, 19.05]},
+    {"code": "W1", "name": "insert width", "role": "free", "readings": [12.7, 12.72, 12.68]},
+    {"code": "T1", "name": "insert height", "role": "free", "readings": [9.0, 9.02, 9.0]},
+    {"code": "D1", "name": "D-shaft bore", "role": "mating", "readings": [6.12, 6.38, 6.05]},
+    {"code": "F1", "name": "flat to opposite side", "role": "mating", "tbd": true}
+  ]
+}

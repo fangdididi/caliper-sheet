@@ -1,0 +1,21 @@
+{
+  "part": {"id": "PART-007", "name": "shelf bracket plate", "units": "mm", "purpose": "print", "material": "PETG", "paper": "A4"},
+  "tools": {"caliper": 0.02, "ruler": 0.5},
+  "dims": [
+    {"code": "L1", "name": "overall length", "role": "clearance", "readings": [80.04, 80.02, 80.06]},
+    {"code": "W1", "name": "overall width", "role": "clearance", "readings": [30.00, 30.02, 29.98]},
+    {"code": "T1", "name": "plate thickness", "role": "mating", "readings": [4.02, 4.00, 4.04]},
+    {"code": "D1", "name": "screw hole", "role": "mating", "readings": [3.42, 3.40, 3.44]},
+    {"code": "X1", "name": "hole 1 from datum A", "role": "mating", "readings": [10.02, 9.98, 10.00]},
+    {"code": "P1", "name": "hole pitch", "role": "mating", "readings": [60.04, 59.98, 60.00]},
+    {"code": "X2", "name": "hole 2 from datum A", "role": "mating", "formula": "X1 + P1"},
+    {"code": "S1", "name": "edge to hole 2", "role": "free", "readings": [10.0, 10.5, 10.0], "tool": "ruler"},
+    {"code": "Y1", "name": "hole row from datum B", "role": "mating", "formula": "W1 / 2"}
+  ],
+  "chains": [{"name": "length along hole row", "parts": ["X1", "P1", "S1"], "overall": "L1"}],
+  "body": {"L": "L1", "W": "W1", "T": "T1"},
+  "features": [
+    {"kind": "hole", "d": "D1", "x": "X1", "y": "Y1", "through": true},
+    {"kind": "hole", "d": "D1", "x": "X2", "y": "Y1", "through": true}
+  ]
+}
